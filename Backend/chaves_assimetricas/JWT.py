@@ -16,7 +16,7 @@ def iniciandoJWT():
 
     secret_key = b'de2d4dba9ca94e7cd4fc69c426449b11'
 
-    private_key = open('Back/ssh/key', 'r').read()
+    private_key = open('Backend/chaves_assimetricas/ssh/key', 'r').read()
     key = serialization.load_ssh_private_key(private_key.encode(), password=secret_key)
 
     new_token = jwt.encode(
@@ -28,7 +28,7 @@ def iniciandoJWT():
     return new_token
 
 def verifica_e_decodifica_jwt(token):
-    public_key = open('Back/ssh/key.pub', 'r').read()
+    public_key = open('Backend/chaves_assimetricas/ssh/key.pub', 'r').read()
     pubKey = serialization.load_ssh_public_key(public_key.encode())
 
     try:
