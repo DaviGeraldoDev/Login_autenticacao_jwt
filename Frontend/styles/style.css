@@ -1,0 +1,76 @@
+html, body{
+    height: 100%;
+}
+
+.form-container a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.body_color{
+    background-color: #002233;
+}
+
+.form-container{
+    max-width: 420px;
+    padding: 3rem;
+    border: solid 5px #0066FF;
+    text-align: center;
+}
+
+.input_form{
+    margin: 12px 0px 12px 0px;
+}
+
+.div_inputs_menores{
+    display: flex;
+    gap: 10px;
+}
+
+.input_form2{
+    width: 50%;
+}
+
+@media (max-width: 800px) {
+    .form-container{
+        max-width: 360px;
+        padding: 2rem;
+    }
+}
+
+/* Animation */
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated{
+    /*Pt. 1*/
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    /*Pt. 2*/
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
