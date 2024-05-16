@@ -1,13 +1,8 @@
 import pyodbc
 from seg_senha import encrypt_md5
 
-'''
-DESKTOP-P0GRB9M
-NOT_DAVI
-'''
-
 #Conexão com o Banco de dados
-cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=DESKTOP-P0GRB9M\SQLEXPRESS;DATABASE=Teste_jwt')
+cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=NOT_DAVI\SQLEXPRESS;DATABASE=Teste_jwt')
 cursor = cnxn.cursor()
 
 #Criação da tabela "clientes"
